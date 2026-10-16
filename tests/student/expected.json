@@ -1,0 +1,20 @@
+[
+{"name": "DSU repeats and self union", "input": {"task": "dsu", "n": 4, "operations": [[0, 0], [0, 1], [1, 2], [0, 2], [3, 3]]}, "output": {"states": [[4, 1], [3, 2], [2, 3], [2, 3], [2, 3]]}},
+{"name": "kruskal disconnected", "input": {"task": "kruskal", "n": 5, "edges": [[0, 0, -99], [0, 1, 3], [0, 1, 1], [1, 2, -2], [0, 2, 4], [3, 3, -8]]}, "output": {"cost": -1, "edge_ids": [3, 2], "components": 3}},
+{"name": "kruskal ties", "input": {"task": "kruskal", "n": 3, "edges": [[0, 1, 1], [1, 2, 1], [0, 2, 1]]}, "output": {"cost": 2, "edge_ids": [0, 1], "components": 1}},
+{"name": "prim disconnected", "input": {"task": "prim", "n": 5, "edges": [[0, 0, -99], [0, 1, 3], [0, 1, 1], [1, 2, -2], [0, 2, 4], [3, 3, -8]]}, "output": {"cost": -1, "edge_ids": [3, 2], "components": 3}},
+{"name": "prim ties", "input": {"task": "prim", "n": 3, "edges": [[0, 1, 1], [1, 2, 1], [0, 2, 1]]}, "output": {"cost": 2, "edge_ids": [0, 1], "components": 1}},
+{"name": "SCC condensation", "input": {"task": "scc", "n": 5, "edges": [[0, 1], [1, 0], [1, 2], [0, 2], [2, 2], [3, 4]]}, "output": {"component": [0, 0, 1, 2, 3], "condensation": [[0, 1], [2, 3]]}},
+{"name": "Topo diamond", "input": {"task": "topo", "n": 4, "edges": [[0, 1], [0, 2], [1, 3], [2, 3]]}, "output": {"acyclic": true, "order": [0, 1, 2, 3]}},
+{"name": "Topo disconnected cycle", "input": {"task": "topo", "n": 5, "edges": [[0, 1], [3, 4], [4, 3]]}, "output": {"acyclic": false, "order": []}},
+{"name": "DAG routes", "input": {"task": "dag", "n": 5, "source": 0, "edges": [[0, 1, 5], [0, 1, 2], [1, 2, -3], [0, 2, -1], [2, 3, 4]]}, "output": {"acyclic": true, "distance": [0, 2, -1, 3, null], "parent_edge": [-1, 1, 3, 4, -1]}},
+{"name": "DAG unreachable cycle", "input": {"task": "dag", "n": 4, "source": 0, "edges": [[0, 1, 1], [2, 3, 2], [3, 2, 2]]}, "output": {"acyclic": false, "distance": [], "parent_edge": []}},
+{"name": "DAG 64-bit distance", "input": {"task": "dag", "n": 4, "source": 0, "edges": [[0, 1, 1000000000], [1, 2, 1000000000], [2, 3, 1000000000]]}, "output": {"acyclic": true, "distance": [0, 1000000000, 2000000000, 3000000000], "parent_edge": [-1, 0, 1, 2]}},
+{"name": "DAG singleton", "input": {"task": "dag", "n": 1, "source": 0, "edges": []}, "output": {"acyclic": true, "distance": [0], "parent_edge": [-1]}},
+{"name": "dsu empty", "input": {"task": "dsu", "n": 0, "operations": []}, "output": {"states": []}},
+{"name": "kruskal empty", "input": {"task": "kruskal", "n": 0, "edges": []}, "output": {"cost": 0, "edge_ids": [], "components": 0}},
+{"name": "prim empty", "input": {"task": "prim", "n": 0, "edges": []}, "output": {"cost": 0, "edge_ids": [], "components": 0}},
+{"name": "scc empty", "input": {"task": "scc", "n": 0, "edges": []}, "output": {"component": [], "condensation": []}},
+{"name": "topo empty", "input": {"task": "topo", "n": 0, "edges": []}, "output": {"acyclic": true, "order": []}},
+{"name": "Topo self loop", "input": {"task": "topo", "n": 1, "edges": [[0, 0]]}, "output": {"acyclic": false, "order": []}}
+]
